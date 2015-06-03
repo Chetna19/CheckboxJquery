@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>user registration form</title>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+
+<script>
+
+
+$(document).ready(function() {
+    $('#btnSubmit').on('click', function(e) {
+        var cnt = $("input[name='technologies']:checked").length;
+        if (cnt < 1) 
+        {
+            alert('Select at least 1 technologies');
+            e.preventDefault();
+        }
+        else 
+            alert('Well Done!!!!');
+    });
+});
+
+
+
+
+</script>
+</head>
+<body>
+Please select at least 3 technologies<br/><br/>
+<input type="checkbox" name="technologies" value="jQuery" /> jQuery <br/>
+<input type="checkbox" name="technologies" value="JavaScript" /> JavaScript <br/>
+<input type="checkbox" name="technologies" value="Prototype" /> Prototype<br/>
+<input type="checkbox" name="technologies" value="Dojo" /> Dojo <br/>
+<input type="checkbox" name="technologies" value="Mootools" /> Mootools <br/>
+<br/>
+<input type="button" id="btnSubmit" value="Submit" />
+
+
+
+</body>
+</html>
